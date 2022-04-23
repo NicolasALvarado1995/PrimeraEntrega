@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <title>Our Funky HTML Page</title>
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+</head>
+<body>
+    En este Template se muestran mis Datos
+    {% for Datos in Datos %}
+    </br>Mi nombre es {{Datos.name}} {{Datos.secondname}} {{Datos.lastname}}
+    </br>Realize el curso de  {{Datos.curso}} con el profesor {{Datos.profesor}} en la comision n° {{Datos.comision}}
+<hr>
+{% endfor %}
+
+</html>
