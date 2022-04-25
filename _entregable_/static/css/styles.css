@@ -11379,3 +11379,12 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}

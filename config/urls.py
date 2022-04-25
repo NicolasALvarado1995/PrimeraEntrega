@@ -21,7 +21,6 @@ urlpatterns = [
     path("htmls/",vista.as_view(), name="datos"),
     path("Formulario/",formularioView.as_view(), name='Formulario'),
     path("Buscar/", Buscarview.as_view(), name='Buscar'),
-    path("Formulario/",formularioView.as_view(), name='Formulario'),
 
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
