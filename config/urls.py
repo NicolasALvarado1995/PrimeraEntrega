@@ -6,8 +6,7 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
-
-from _entregable_.Muestro.views import vista
+from _entregable_.Muestro.views import vista, formularioView, Buscarview
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -17,12 +16,16 @@ urlpatterns = [
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
-    path("users/", include("_entregable_.users.urls", namespace="users")),
+    path("indexmejorado/",TemplateView.as_view(template_name="indexmejorado/index.html"), name="templatemejorado"),
     path("accounts/", include("allauth.urls")),
-    path("htmls",vista.as_view(), name="datos"),
+    path("htmls/",vista.as_view(), name="datos"),
+    path("Formulario/",formularioView.as_view(), name='Formulario'),
+    path("Buscar/", Buscarview.as_view(), name='Buscar'),
+    path("Formulario/",formularioView.as_view(), name='Formulario'),
+
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+ 
 # API URLS
 urlpatterns += [
     # API base url
